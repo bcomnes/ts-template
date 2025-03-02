@@ -8,14 +8,14 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@voxpelli/tsconfig": "^15.0.0",
+    "@voxpelli/tsconfig": "github:voxpelli/tsconfig#renovate/typescript-5.x",
     "@types/node": "^22.1.0",
     "neostandard": "^0.12.0",
     "npm-run-all2": "^7.0.1",
     "auto-changelog": "^2.0.0",
     "gh-release": "^7.0.0",
     "c8": "^10.0.0",
-    "typescript": "~5.7.2"
+    "typescript": "~5.8.2"
   },
   "engines": {
     "node": ">=20",
@@ -36,7 +36,6 @@
     "prepublishOnly": "npm run build && git push --follow-tags && gh-release -y",
     "postpublish": "npm run clean",
     "test": "run-s test:*",
-    "test:deptree": "depcruise --validate .dependency-cruiser.json .",
     "test:lint": "eslint",
     "test:tsc": "eslint .",
     "test:node-test": "c8 node --test --test-reporter spec",
@@ -47,7 +46,9 @@
     "build:declaration": "tsc -p declaration.tsconfig.json",
     "clean": "run-p clean:*",
     "clean:declarations-top": "rm -rf $(find . -maxdepth 1 -type f -name '*.d.ts*')",
-    "clean:declarations-lib": "rm -rf $(find lib -type f -name '*.d.ts*' ! -name '*-types.d.ts')"
+    "clean:js-top": "rm -rf $(find . -maxdepth 1 -type f -name '*.js' ! -name '*.config.js')",
+    "clean:declarations-lib": "rm -rf $(find lib -type f -name '*.d.ts*' ! -name '*-types.d.ts')",
+    "clean:js-lib": "rm -rf $(find lib -type f -name '*.js')"
   },
   "funding": {
     "type": "individual",

@@ -10,3 +10,8 @@ coverage
 
 *.d.ts
 *.d.ts.map
+
+# Generated js
+
+*.js
+!*.config.js

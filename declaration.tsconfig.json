@@ -3,11 +3,12 @@
   "compilerOptions": {
     "declaration": true,
     "declarationMap": true,
-    "noEmit": false,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": false,
+    "noEmit": false
   },
   "exclude": [
-    "**/*.test.js",
+    "**/*.js",
+    "**/*.test.ts",
     "node_modules",
     "coverage",
     ".github"
