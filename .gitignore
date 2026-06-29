@@ -16,3 +16,4 @@ lcov.info
 
 *.js
 !*.config.js
+.claude
