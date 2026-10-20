@@ -10,10 +10,11 @@
   "devDependencies": {
     "@voxpelli/tsconfig": "^17.0.0",
     "@types/node": "^26.0.0",
+    "@typescript/native": "npm:typescript@~7.0.2",
     "neostandard": "^0.14.1",
     "npm-run-all2": "^9.0.0",
     "releasearoni": "^0.2.0",
-    "typescript": "~6.0.3"
+    "typescript": "npm:@typescript/typescript6@~6.0.2"
   },
   "engines": {
     "node": "^22.13.0 || >=24",
